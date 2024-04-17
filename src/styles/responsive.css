@@ -1,0 +1,203 @@
+@import url('main.css');
+
+@media screen and (min-width: 650px) {
+  .nav-bar {
+    grid-template-columns: 1fr auto;
+  }
+ 
+  .nav-bar .nav-bar__menu {
+    display: none;
+  }
+ 
+  .nav-bar .nav-bar__navigation {
+    position: static;
+    width: 100%;
+  }
+ 
+  .nav-bar .nav-bar__navigation ul {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    width: fit-content;
+  }
+
+  .nav-bar .nav-bar__navigation ul li {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+  }
+ 
+  .nav-bar .nav-bar__navigation ul li a {
+    width: 120px;
+    text-align: center;
+    margin: 0;
+    font-size: 1.1rem;
+  }
+ 
+  /* .movies {
+    grid-template-columns: 1fr 1fr;
+  }
+ 
+  .movie {
+    grid-template-columns: auto 1fr;
+  }
+ 
+  .movie .movie__title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+ 
+  .movie .movie__overview {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  } */
+}
+
+@media screen and (max-width: 1600px) {
+}
+
+@media screen and (min-width: 1200px) {
+  .restaurant-item .restaurant-item__header .restaurant-item__header__poster {
+    width: auto;
+    height: 18rem;
+  }
+
+  .error__container {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .restaurant.grid__edit .customer__review .customer__review__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .hero .hero-description {
+    font-size: 3.5rem;
+  }
+
+  main {
+    padding: 32px 10px;
+  }
+
+  .restaurant.grid__edit {
+    width: 90%;
+  }
+
+  .restaurant.grid__edit .restaurant__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } 
+
+  .restaurant.grid__edit .restaurant__container .restaurant__text__container { 
+    width: 100%;
+  }
+
+  .restaurant.grid__edit .restaurant__container .restaurant__text__container .restaurant__description {
+    text-indent: 50px;
+  }
+
+  .restaurant.grid__edit .restaurant__container .restaurant__picture {
+    width: 80%;
+    height: 20rem;
+  }
+
+  .restaurant.grid__edit .restaurant__info .restaurant__info__all__menu .detail__menu ul {
+    column-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .restaurant {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .restaurant.grid__edit .customer__review .customer__review__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .nav-bar {
+    padding: 0 0 0 10px;
+  }
+
+  .navbar .nav-bar__navigation {
+    padding-right: 0;
+    top: 8px;
+  }
+
+  .nav-bar .nav-bar__navigation ul {
+    padding-bottom: 10px;
+    gap: .4rem;
+  }
+
+  .nav-bar .nav-bar__navigation ul li a {
+    padding: 0 10px;
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .hero .hero-description {
+    font-size: 3rem;
+  }
+
+  .nav-bar .nav-bar__navigation {
+    padding: 10px;
+    height: fit-content;
+  }
+
+  .nav-bar .nav-bar__navigation ul li {
+    padding: 0 15px;
+  }
+
+  .restaurant.grid__edit .restaurant__container .restaurant__text__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .restaurant.grid__edit .restaurant__info .restaurant__info__all__menu {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .restaurant.grid__edit .customer__review .customer__review__container {
+    grid-template-columns: 1fr;
+    gap: 5px 10px;
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .restaurant.grid__edit .restaurant__container .restaurant__picture {
+    width: 80%;
+    height: 15rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  main {
+    padding: 32px 0;
+  }
+
+  .restaurant {
+    grid-template-columns: 1fr;
+  }
+
+  .restaurant.grid__edit .restaurant__container .restaurant__text__container {
+    width: 90%;
+  }
+
+  .restaurant.grid__edit .restaurant__container .restaurant__text__container .restaurant__description {
+    text-indent: 35px;
+  }
+}
