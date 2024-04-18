@@ -5,7 +5,7 @@ import DetailMenu from './menu-template';
 const createRestaurantDetailTemplate = (restaurant) => `
   <h2 class="content__heading" tabindex="0">Detail Restaurant</h2>
   <section class="restaurant__container">
-    <img class="restaurant__picture" src="${CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId}" alt="${restaurant.name}" />
+    <img class="lazyload restaurant__picture" data-src="${CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId}" alt="${restaurant.name}" />
     <div class="restaurant__text__container" tabindex="0">
       <h2 class="restaurant__name">${restaurant.name}</h2>
       <h4>${restaurant.city}</h4>
@@ -55,7 +55,7 @@ const createRestaurantItemTemplate = (restaurant) => `
       <h4>${restaurant.city || '-'}</h4>
       <picture>
         <source media="(max-width: 600px)" srcset="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}" alt="${restaurant.name || '-'}" type="image/jpeg">
-        <img class="lazyload restaurant-item__header__poster" src="${CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId}" alt="${restaurant.name || '-'}">
+        <img class="lazyload restaurant-item__header__poster" data-src="${CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId}" alt="${restaurant.name || '-'}">
       </picture>
     </div>
     <div class="restaurant-item__content">
