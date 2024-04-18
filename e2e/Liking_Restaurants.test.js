@@ -30,3 +30,28 @@ Scenario('liking one restaurant and cancel liking this restaurant', async ({ I }
 
   pause();
 });
+
+Scenario('e2e customer review feature', async ({ I }) => {
+  I.amOnPage('/');
+
+  const firstRestaurant = locate('.restaurant__title a').first();
+  I.click(firstRestaurant);
+
+  I.seeElement('.customer__review__card__container');
+  I.seeElement('.customer__add__review');
+
+  const name = 'Rifaldi';
+  I.fillField('input[name="name"]', name);
+
+  const review = 'makanannya enak!';
+  I.fillField('textarea[name="message"]', review);
+
+  I.click('#submitBtn');
+
+  const initialNumberOfReviews = await I.grabNumberOfVisibleElements('.customer__review__card__container');
+  const finalNumberOfReviews = await I.grabNumberOfVisibleElements('.customer__review__card__container');
+
+  assert.strictEqual(finalNumberOfReviews, initialNumberOfReviews + 1);
+
+  pause();
+});
