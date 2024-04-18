@@ -143,6 +143,10 @@
     min-width: 44px;
   }
 
+  .hero {
+    background-image: url('../public/images/hero-image_4-small.jpg');
+  }
+
   .hero .hero-description {
     font-size: 3rem;
   }

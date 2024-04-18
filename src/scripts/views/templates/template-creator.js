@@ -54,7 +54,7 @@ const createRestaurantItemTemplate = (restaurant) => `
     <div class="restaurant-item__header">
       <h4>${restaurant.city || '-'}</h4>
       <picture>
-        <source media="(max-width: 600px)" srcset="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}" alt="${restaurant.name || '-'}" type="image/jpeg">
+        <source media="(max-width: 600px)" data-srcset="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}" alt="${restaurant.name || '-'}" type="image/jpeg">
         <img class="lazyload restaurant-item__header__poster" data-src="${CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId}" alt="${restaurant.name || '-'}">
       </picture>
     </div>
